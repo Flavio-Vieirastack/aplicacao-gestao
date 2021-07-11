@@ -8,7 +8,7 @@ class sobreNosController extends Controller
 {
     public function sobreNos () {
 
-        echo 'Sobre via controller';
+        return view ('site.sobreNos');
 
     }
 }

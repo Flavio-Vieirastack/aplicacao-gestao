@@ -18,3 +18,9 @@ Route::get('/', 'principalController@principal');
 Route::get('/sobreNos', 'sobreNosController@sobreNos');
 
 Route::get('/contato', 'contatoController@contato');
+
+Route::get('/contato/{nome}/{categoria}/{assunto}/{mensagem}', function (string $nome, string $categoria, string $assunto, string $mensagem) {
+
+    echo "estamos aqui: .$nome - .$categoria - .$assunto - .$mensagem";
+
+});
