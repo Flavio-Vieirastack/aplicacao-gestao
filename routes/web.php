@@ -13,17 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'principalController@principal');
+Route::get('/', 'principalController@principal')->name ('site.index');
 
-Route::get('/sobreNos', 'sobreNosController@sobreNos');
+Route::get('/sobreNos', 'sobreNosController@sobreNos')-> name('site.sobreNos');
 
-Route::get('/contato', 'contatoController@contato');
+Route::get('/contato', 'contatoController@contato')->name ('site.contato');
 
+Route::get('/login', function () {return 'login';})-> name ('site.login');
 
-Route::get('/loguin', function () {return 'loguin';});
+Route::prefix ('/app')->group (function () {
 
-Route::get('/clientes', function () {return 'Clientes';});
+    Route::get('/clientes', function () {return 'Clientes';})-> name ('app.clientes');
 
-Route::get('/fornecedores', function () {return 'Fornecedores';});
+    Route::get('/fornecedores', function () {return 'Fornecedores';})->name('app.fornecedores');
 
-Route::get('/produtos', function () {return 'Produtos';});
+    Route::get('/produtos', function () {return 'Produtos';})->name ('app.produtos');
+
+});
+
