@@ -19,8 +19,11 @@ Route::get('/sobreNos', 'sobreNosController@sobreNos');
 
 Route::get('/contato', 'contatoController@contato');
 
-Route::get('/contato/{nome}/{categoria}/{assunto}/{mensagem}', function (string $nome, string $categoria, string $assunto, string $mensagem) {
 
-    echo "estamos aqui: .$nome - .$categoria - .$assunto - .$mensagem";
+Route::get('/loguin', function () {return 'loguin';});
 
-});
+Route::get('/clientes', function () {return 'Clientes';});
+
+Route::get('/fornecedores', function () {return 'Fornecedores';});
+
+Route::get('/produtos', function () {return 'Produtos';});
