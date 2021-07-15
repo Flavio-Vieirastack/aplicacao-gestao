@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Super Gestão - Home</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href= "{{ asset ('css/styles.css')}}">  
+    </head>
+
+    <body>
+
+    @yield('conteudo')
+
+    </body>
+</html>
