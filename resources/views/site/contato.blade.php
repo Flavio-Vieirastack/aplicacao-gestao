@@ -1,5 +1,6 @@
 @extends('site.padrao.template')
 
+@section('titulo', 'Contato')
 @section('conteudo')
 
         <div class="topo">
