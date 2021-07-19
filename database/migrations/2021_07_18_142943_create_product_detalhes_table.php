@@ -17,9 +17,9 @@ class CreateProductDetalhesTable extends Migration
     //tabela inicio
             $table->id();
             
-        //chave de referencia inicio
-            $table->unsignedBigInteger('produto_id');
-        //chave de referencia fim
+        
+            $table->unsignedBigInteger('produto_id'); //chave de referencia
+        
         
             $table->float('comprimento',8,2);
             $table->float('largura',8,2);
@@ -28,10 +28,10 @@ class CreateProductDetalhesTable extends Migration
         
             $table->timestamps();
     //tabela fim
-        //contraints inicio
+        //contraints
             $table->foreign('produto_id')->references('id')->on('produtos');
             $table->unique('produto_id');
-        //contraints fim
+        
         });
     }
 

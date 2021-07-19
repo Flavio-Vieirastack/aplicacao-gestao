@@ -20,7 +20,7 @@ class CreateProdutosTable extends Migration
             $table->text('descriçao')->nullable();
             $table->integer('peso')->nullable();
             $table->float('Preço_venda', 8,2)->default(1);
-            $table->integer('estoque_minimo')->default(1);
+            $table->integer('estoque_minimo')->default(0);
             $table->integer('estoque_maximo')->default(100);
 
             $table->timestamps();
